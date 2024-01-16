@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/amaranth_bold</item>
+        <item>@font/caveat_brush</item>
+        <item>@font/ceviche_one</item>
+        <item>@font/margarine</item>
+        <item>@font/merienda_one</item>
+        <item>@font/mirza_bold</item>
+        <item>@font/noto_serif_bold_italic</item>
+        <item>@font/source_sans_pro_black_italic</item>
+    </array>
+</resources>

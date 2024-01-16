@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!---
+    ConstraintLayout utilizado para dispor os elementos na tela
+    de qualquer maneira em qualquer posição, porém ele é o mais pesado
+    para se utilizar!
+
+    para dispor os elementos na tela, trabalhar com
+    ToptoTopOf "parent | @id"
+
+    wrap_content = o layout se ajusta de acordo com o tamanho do conteúdo
+    match_parent = o layout se estica até encostar no container pai
+    0dp = igual ao match_parent, mas posso usar as margens start e end..
+    .. para ajustar o layout!
+    -->
+
+    <TextView
+        android:id="@+id/constraint_txtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:text="Texto se ajusta de acordo com o conteúdo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/constraint_btn_acionar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorAccent"
+        android:text="Match parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraint_txtView" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:text="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraint_btn_acionar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
