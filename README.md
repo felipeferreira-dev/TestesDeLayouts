@@ -10,6 +10,7 @@
 - ``Java``
 - ``XML``
 - ``Layouts``
+- ``Intents``
 
 <br>*Todo processo de Front-End e Back-End desenvolvido por [@DevFelipeFerreira](https://github.com/felipeferreira-dev).*</br>
 
