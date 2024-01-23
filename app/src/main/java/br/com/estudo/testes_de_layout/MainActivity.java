@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         btn = findViewById(R.id.btn_tela2);
 
+        // TODO: 19/01/2024 Testando layouts
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
