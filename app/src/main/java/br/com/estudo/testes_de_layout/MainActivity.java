@@ -6,22 +6,14 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AbstractActivity {
     private Button btn;
-
     private Intent intent;
     private Bundle bundle;
-
-    public static final String KEY_NAME = "key_name";
-    public static final String KEY_AGE = "key_age";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.linear_layout);
-        initVar();
 
         // TODO: 19/01/2024 Testando layouts
         btn.setOnClickListener(view -> {
@@ -37,12 +29,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void initVar() {
+    @Override
+    public void initViews() {
         bundle = new Bundle();
         btn = findViewById(R.id.btn_tela2);
     }
 
-    void toastMessage(Context context, String s) {
-        Toast.makeText(context, s, Toast.LENGTH_LONG).show();
+    @Override
+    public int getLayout() {
+        return R.layout.linear_layout;
     }
 }

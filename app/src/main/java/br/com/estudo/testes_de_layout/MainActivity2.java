@@ -6,26 +6,21 @@ import static br.com.estudo.testes_de_layout.MainActivity.KEY_NAME;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
-
-import androidx.appcompat.app.AppCompatActivity;
+import android.widget.Toast;
 
 import java.util.Locale;
 
-public class MainActivity2 extends AppCompatActivity {
+public class MainActivity2 extends AbstractActivity {
 
     private TextView txtMain;
-
-    MainActivity main;
     Bundle bundleExtras;
     Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        initViews();
 
-        main.toastMessage(this, "Entrei na tela 2!!");
+        toastMessage(this, "Entrei na tela 2!!", Toast.LENGTH_SHORT);
 
 /*        final String stringExtra = getIntent().getStringExtra(KEY_INFORMACAO);
         if (stringExtra != null)
@@ -46,9 +41,14 @@ public class MainActivity2 extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void initViews() {
-        main = new MainActivity();
+    @Override
+    public void initViews() {
         intent = new Intent(this, MainActivity3.class);
         txtMain = findViewById(R.id.txt_main);
+    }
+
+    @Override
+    public int getLayout() {
+        return R.layout.activity_main;
     }
 }
