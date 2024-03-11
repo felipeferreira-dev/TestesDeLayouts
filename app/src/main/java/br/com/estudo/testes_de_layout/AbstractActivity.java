@@ -17,11 +17,15 @@ public abstract class AbstractActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        logDebug(getLocalClassName(), "ON CREATE!!!");
         setContentView(getLayout());
+        logDebug(getLocalClassName(), "ON CREATE!!!");
         initViews();
-
     }
+
+    public abstract void initViews();
+
+    public abstract int getLayout();
+
     public static void toastMessage(Context context, String message, int duration) {
         Toast.makeText(context, message, duration).show();
     }
@@ -59,8 +63,4 @@ public abstract class AbstractActivity extends AppCompatActivity {
         super.onStart();
         logDebug(getLocalClassName(), "ON START!!!");
     }
-
-    public abstract void initViews();
-
-    public abstract int getLayout();
 }

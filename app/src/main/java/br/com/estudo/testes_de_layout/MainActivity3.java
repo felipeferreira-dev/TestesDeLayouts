@@ -1,10 +1,5 @@
 package br.com.estudo.testes_de_layout;
 
-import static br.com.estudo.testes_de_layout.MainActivity.KEY_AGE;
-import static br.com.estudo.testes_de_layout.MainActivity.KEY_NAME;
-
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.Toast;
 
