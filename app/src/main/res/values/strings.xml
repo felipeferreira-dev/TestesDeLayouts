@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Testes de Layout</string>
+    <string name="app_name">TestesLayout</string>
     <string name="ola">Olá, seja muito bem vindo!!!</string>
     <string name="title_activity_main">MainActivity</string>
     <!-- Strings used for fragments for navigation -->

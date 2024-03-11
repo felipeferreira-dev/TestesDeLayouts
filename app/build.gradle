@@ -13,10 +13,38 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    lintOptions {
+//        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("Deployment_TesteLayout.jks")
+            storePassword "viper8910"
+            keyAlias "master_key"
+            keyPassword "viper8910"
+        }
+    }
+
     buildTypes {
+        def DEVICE_APOS = "\"APOS\""
+        def DEVICE_PHONE = "\"PHONE\""
+        def DEVICE_KEY = "deviceType"
+        // final APK - for POS android devices
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+
+            buildConfigField("String", DEVICE_KEY, DEVICE_PHONE)
+        }
+        // debug apk - for POS android devices
+        debug {
+            buildConfigField("String", DEVICE_KEY, DEVICE_PHONE)
+            signingConfig signingConfigs.release
         }
     }
     buildFeatures {
