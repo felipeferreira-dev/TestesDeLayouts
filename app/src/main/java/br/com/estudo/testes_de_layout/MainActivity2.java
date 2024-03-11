@@ -22,6 +22,7 @@ public class MainActivity2 extends AbstractActivity {
 
         toastMessage(this, "Entrei na tela 2!!", Toast.LENGTH_SHORT);
 
+        // Obtendo dados de intent extra
 /*        final String stringExtra = getIntent().getStringExtra(KEY_INFORMACAO);
         if (stringExtra != null)
             txtMain.setText(stringExtra);*/
